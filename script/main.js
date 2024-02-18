@@ -48,7 +48,7 @@ function addItem(elementId) {
 }
 
 // ----------------------------------------------
-// declare array to track user selected seats
+// declare array to track user selected seats(global variable);
 let selectedSeats = [];
 
 function seatClickEventHandelar(event) {
@@ -68,9 +68,24 @@ function seatClickEventHandelar(event) {
   }
 }
 
-// add event listener:
+// added event listener to seat:
 const seats = document.querySelectorAll(".seat");
 for (let seat of seats) {
   seat.addEventListener("click", seatClickEventHandelar);
 }
 
+//------------------------------------
+// Enable or disabled Next button based on the condition:
+const numberInputElement = document.getElementById("form-number-input");
+
+const nextBtn = document.getElementById("next-btn");
+
+numberInputElement.addEventListener("keyup", function (event) {
+  let inpuNumber = parseFloat(event.target.value);
+
+  if (inpuNumber > 0 && selectedSeats.length > 0) {
+    nextBtn.removeAttribute("disabled");
+  } else {
+    nextBtn.setAttribute("disabled", true);
+  }
+});
