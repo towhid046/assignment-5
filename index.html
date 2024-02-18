@@ -413,10 +413,103 @@
           <!-- seperator -->
           <img src="/images/green-seperator.svg" alt="" />
           <!-- seat count -->
-          
+          <aside>
+            <h3 class="border-dashed border-b-2 pb-5 font-semibold text-2xl">
+              Select Your Seat
+            </h3>
+
+            <div class="bg-gray-100 my-5 rounded-2xl p-8">
+              <div
+                class="flex items-center justify-between border-dashed border-b-2 py-4 font-semibold text-base"
+              >
+                <h3>
+                  Seats
+                  <span class="btn btn-xs bg-custom-green text-white">0</span>
+                </h3>
+                <h3>Calss</h3>
+                <h3>Price</h3>
+              </div>
+
+              <ul class="items mt-5 space-y-2 mb-5">
+                <li
+                  class="flex justify-between items-center text-base text-[#03071299] font-normal"
+                >
+                  <span>A1</span> <span>Economy</span> <span>550</span>
+                </li>
+                <li
+                  class="flex justify-between items-center text-base text-[#03071299] font-normal"
+                >
+                  <span>A1</span> <span>Economy</span> <span>550</span>
+                </li>
+              </ul>
+
+              <hr />
+              <h2 class="text-base font-semibold flex justify-between py-5">
+                <span>Total Price</span> <span>BDT 1100</span>
+              </h2>
+
+              <div class="join bg-white p-3 rounded-xl">
+                <input
+                  class="input input- join-item"
+                  placeholder="Have any copupon?"
+                />
+                <button
+                  class="btn bg-custom-green text-white hover:bg-slate-800"
+                >
+                  Apply
+                </button>
+              </div>
+              <h2 class="text-base font-semibold flex justify-between py-5">
+                <span>Grand Total</span> <span>BDT 1100</span>
+              </h2>
+            </div>
+
+            <!-- form -->
+
+            <form action="" class="space-y-4">
+
+              <label class="form-control">
+                <div class="label">
+                  <span class="font-semibold text-base">Passenger Name *</span>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  class="input input-bordered w-full"
+                />
+              </label>
+              <label class="form-control">
+                <div class="label">
+                  <span class="font-semibold text-base">Phone Number *</span>
+                </div>
+                <input
+                  type="number"
+                  placeholder="Enter your phone number"
+                  class="input input-bordered w-full"
+                />
+              </label>
+              <label class="form-control">
+                <div class="label">
+                  <span class="font-semibold text-base">Email ID *</span>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Enter your email id"
+                  class="input input-bordered w-full"
+                />
+              </label>
+              <button class="btn bg-custom-green w-[100%] text-white hover:bg-slate-800 rounded-2xl">Next</button>
+            </form>
+            <div class="text-[#03071299] mt-6 flex justify-evenly">
+              <a href="" class="underline">Terms and Conditions</a>
+              <a href="" class="underline">Cancellation Policy</a>
+            </div>
+          </aside>
         </section>
       </section>
     </main>
-    <footer class="container mx-auto px-5"></footer>
+    <footer class="mx-auto">
+      
+    </footer>
   </body>
 </html>
