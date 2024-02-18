@@ -18,6 +18,7 @@
           extend: {
             colors: {
               clifford: "#da373d",
+              "custom-green": "#1dd100",
             },
           },
         },
@@ -201,10 +202,14 @@
         </header>
 
         <!-- green line paribahan section -->
-        <section class="container mx-auto bg-white rounded-3xl flex flex-col lg:flex-row  justify-center">
+        <section
+          class="container mx-auto bg-white rounded-3xl flex flex-col lg:flex-row justify-center"
+        >
           <!-- sub-section start -->
           <div class="lg:w-9/12 p-8">
-            <header class="flex gap-4 flex-col lg:flex-row justify-between items-center mb-6">
+            <header
+              class="flex gap-4 flex-col lg:flex-row justify-between items-center mb-6"
+            >
               <div class="flex items-center gap-4 flex-col lg:flex-row">
                 <img class="w-28" src="/images/bus-logo.png" alt="" />
                 <div>
@@ -225,16 +230,30 @@
             </header>
 
             <div class="p-8 bg-[#f7f8f8] rounded-3xl space-y-5">
-              <h3 class="border-dashed border-b-2 text-lg font-semibold flex justify-between pb-5">
-                <span class="text-gray-500">Route</span> <span>Dhaka - Sylhet</span>
+              <h3
+                class="border-dashed border-b-2 text-lg font-semibold flex justify-between pb-5"
+              >
+                <span class="text-gray-500">Route</span>
+                <span>Dhaka - Sylhet</span>
               </h3>
-              <h3 class="border-dashed border-b-2 text-lg font-semibold flex justify-between pb-5">
-                <span class="text-gray-500">Depatrure Time</span> <span>9:00 PM</span>
+              <h3
+                class="border-dashed border-b-2 text-lg font-semibold flex justify-between pb-5"
+              >
+                <span class="text-gray-500">Depatrure Time</span>
+                <span>9:00 PM</span>
               </h3>
-              <div class="space-x-4 flex flex-col lg:flex-row gap-5 text-center justify-between">
-                <button class="btn font-medium inter-font text-base">Boarding Point - Laxmipur</button>
-                <button class="btn font-medium inter-font text-base">Dropping Point - Bogura</button>
-                <button class="btn font-medium inter-font text-base">Est. Time - 11 Hour</button>
+              <div
+                class="space-x-4 flex flex-col lg:flex-row gap-5 text-center justify-between"
+              >
+                <button class="btn font-medium inter-font text-base">
+                  Boarding Point - Laxmipur
+                </button>
+                <button class="btn font-medium inter-font text-base">
+                  Dropping Point - Bogura
+                </button>
+                <button class="btn font-medium inter-font text-base">
+                  Est. Time - 11 Hour
+                </button>
               </div>
             </div>
           </div>
@@ -251,10 +270,151 @@
               <h3 class="font-semibold text-2xl text-gray-500">Per Seat</h3>
             </div>
           </div>
-
         </section>
+
         <!--bus seats section  -->
-        <section></section>
+        <section
+          class="inter-font container mx-auto mt-5 flex bg-white rounded-3xl p-8 justify-center gap-16"
+        >
+          <!-- sets -->
+          <div class="">
+            <header>
+              <h3 class="border-dashed border-b-2 pb-5 font-semibold text-2xl">
+                Select Your Seat
+              </h3>
+
+              <div
+                class="flex items-center justify-between border-dashed border-b-2 py-4 inter-font"
+              >
+                <div class="flex items-center">
+                  <img src="/images/seat-gray.png" alt="" />
+                  <p class="text-lg font-medium text-gray-500">Available</p>
+                </div>
+                <div class="flex items-center">
+                  <img src="/images/seat-green-filled.png" alt="" />
+                  <p class="text-lg font-medium text-custom-green">Available</p>
+                </div>
+              </div>
+              <div class="flex justify-between py-6">
+                <p></p>
+                <button class="btn px-8 bg-gray-200">
+                  <img src="/images/steering-wheel.svg" alt="" />
+                </button>
+              </div>
+            </header>
+            <!-- all seats list -->
+            <div class="inter-font flex justify-between gap-14">
+              <ul class="grid grid-cols-3 gap-7">
+                <li
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                >
+                  A
+                </li>
+                <li class="btn px-8">A1</li>
+                <li class="btn px-8">A2</li>
+
+                <li
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                >
+                  B
+                </li>
+                <li class="btn px-8">B1</li>
+                <li class="btn px-8">B2</li>
+
+                <li
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                >
+                  C
+                </li>
+                <li class="btn px-8">C1</li>
+                <li class="btn px-8">C2</li>
+
+                <li
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                >
+                  D
+                </li>
+                <li class="btn px-8">D1</li>
+                <li class="btn px-8">D2</li>
+
+                <li
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                >
+                  E
+                </li>
+                <li class="btn px-8">E1</li>
+                <li class="btn px-8">E2</li>
+
+                <li
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                >
+                  F
+                </li>
+                <li class="btn px-8">F1</li>
+                <li class="btn px-8">F2</li>
+
+                <li
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                >
+                  G
+                </li>
+                <li class="btn px-8">G1</li>
+                <li class="btn px-8">G2</li>
+
+                <li
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                >
+                  H
+                </li>
+                <li class="btn px-8">H1</li>
+                <li class="btn px-8">H2</li>
+
+                <li
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                >
+                  I
+                </li>
+                <li class="btn px-8">I1</li>
+                <li class="btn px-8">I2</li>
+
+                <li
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                >
+                  J
+                </li>
+                <li class="btn px-8">J2</li>
+                <li class="btn px-8">J2</li>
+              </ul>
+
+              <ul class="grid grid-cols-2 gap-7">
+                <li class="btn px-8">A3</li>
+                <li class="btn px-8">A4</li>
+                <li class="btn px-8">B3</li>
+                <li class="btn px-8">B4</li>
+                <li class="btn px-8">C3</li>
+                <li class="btn px-8">C4</li>
+                <li class="btn px-8">D3</li>
+                <li class="btn px-8">D4</li>
+                <li class="btn px-8">E3</li>
+                <li class="btn px-8">E4</li>
+                <li class="btn px-8">F3</li>
+                <li class="btn px-8">F4</li>
+                <li class="btn px-8">G3</li>
+                <li class="btn px-8">G4</li>
+                <li class="btn px-8">H3</li>
+                <li class="btn px-8">H4</li>
+                <li class="btn px-8">I3</li>
+                <li class="btn px-8">I4</li>
+                <li class="btn px-8">J3</li>
+                <li class="btn px-8">J4</li>
+              </ul>
+            </div>
+          </div>
+          <!-- seperator -->
+          <img src="/images/green-seperator.svg" alt="" />
+          <!-- seat count -->
+          
+        </section>
       </section>
     </main>
     <footer class="container mx-auto px-5"></footer>
