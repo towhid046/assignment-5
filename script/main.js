@@ -59,23 +59,23 @@ let selectedSeats = [];
 function seatClickEventHandelar(event) {
   const elementId = event.target.id;
 
- if(selectedSeats.length < 4){
-  if (selectedSeats.includes(elementId) === false) {
-    selectedSeats.push(elementId);
+  if (selectedSeats.length < 4) {
+    if (selectedSeats.includes(elementId) === false) {
+      selectedSeats.push(elementId);
 
-    addItem(elementId);
-    setBackgroundAndColor(event);
-    decrementTotalSeatBy(1);
-    incrementUserTotalSeatBy(1);
-    updateTotalPriceBy(550);
-    updateGrandTotalPriceBy(550);
-    applyCoupnCode(selectedSeats);
-  } else if (selectedSeats.includes(elementId) === true) {
-    alert("Seat already have selected!");
+      addItem(elementId);
+      setBackgroundAndColor(event);
+      decrementTotalSeatBy(1);
+      incrementUserTotalSeatBy(1);
+      updateTotalPriceBy(550);
+      updateGrandTotalPriceBy(550);
+      applyCoupnCode(selectedSeats);
+    } else if (selectedSeats.includes(elementId) === true) {
+      alert("Seat already have selected!");
+    }
+  } else {
+    alert("You only can purchese 4 seat by your account");
   }
- } else{
-  alert('You only can purchese 4 seat by your account')
- }
 }
 
 // added event listener to seat:
@@ -118,17 +118,25 @@ nextBtn.addEventListener("click", function (event) {
 });
 // -------------------------------------
 // enable apply coupn button based on the condition:
-function applyCoupnCode(){
-  if(selectedSeats.length === 4){
-    alert('You got a chance to discout');
-   const applyBtn = document.getElementById('apply-btn');
-    applyBtn.removeAttribute('disabled');
+function applyCoupnCode() {
+  if (selectedSeats.length === 4) {
+    const applyBtn = document.getElementById("apply-btn");
+    applyBtn.removeAttribute("disabled");
   }
 }
 
-function getDiscount(){
-  const coupnInputValue = document.getElementById('coupn-input-fild').value;
-  if(coupnInputValue === 'NEW15'){
-    
+function getDiscount() {
+  const currentTotalPrice = parseInt(getElementInnerTextById("total-price"));
+  const coupnInputValue = document.getElementById("coupn-input-fild").value;
+
+  const discountShow = document.getElementById('discount-show');
+  const coupnShow = document.getElementById('coupn-div');
+
+  if (coupnInputValue === "NEW15") {
+    const discount = (currentTotalPrice * 15) / 100; 
+    setInnerTextById("grand-total-price", (currentTotalPrice - discount));
+    setInnerTextById('discount-amount', discount);
+    coupnShow.classList.add('hidden')
+    discountShow.classList.remove('hidden')
   }
 }
