@@ -15,6 +15,17 @@ function setBackgroundAndColor(event) {
 }
 
 //--------------------------------------
+function addItem(elementId) {
+  const seatName = getElementInnerTextById(elementId);
+  const seatsContainer = document.getElementById("seats-container");
+  seatsContainer.innerHTML += `
+  <li class="flex justify-between items-center text-base text-[#03071299] font-normal">
+     <span class='user-selected-seat'>${seatName}</span> 
+     <span>Economy</span> 
+     <span>550</span>
+  </li>
+  `;
+}
 
 function decrementTotalSeatBy(number) {
   const currentSeats = parseInt(getElementInnerTextById("seat-counter"));
@@ -36,16 +47,14 @@ function updateGrandTotalPriceBy(number) {
   setInnerTextById("grand-total-price", currentPrice + number);
 }
 
-function addItem(elementId) {
-  const seatName = getElementInnerTextById(elementId);
-  const seatsContainer = document.getElementById("seats-container");
-  seatsContainer.innerHTML += `
-  <li class="flex justify-between items-center text-base text-[#03071299] font-normal">
-     <span class='user-selected-seat'>${seatName}</span> 
-     <span>Economy</span> 
-     <span>550</span>
-  </li>
-  `;
+function calculateAndSetDiscountAmount(currentPrice, value) {
+  const discountShow = document.getElementById("discount-show");
+  const coupnShow = document.getElementById("coupn-div");
+  const discount = (currentPrice * value) / 100;
+  setInnerTextById("grand-total-price", currentPrice - discount);
+  setInnerTextById("discount-amount", discount);
+  coupnShow.classList.add("hidden");
+  discountShow.classList.remove("hidden");
 }
 
 // ----------------------------------------------
@@ -116,6 +125,7 @@ nextBtn.addEventListener("click", function (event) {
     nextPage.classList.remove("hidden");
   }, 300);
 });
+
 // -------------------------------------
 // enable apply coupn button based on the condition:
 function applyCoupnCode() {
@@ -125,18 +135,21 @@ function applyCoupnCode() {
   }
 }
 
+// -------------------------------------
+// this function is called when user click on apply button (it apply on html directly):
 function getDiscount() {
   const currentTotalPrice = parseInt(getElementInnerTextById("total-price"));
   const coupnInputValue = document.getElementById("coupn-input-fild").value;
 
-  const discountShow = document.getElementById('discount-show');
-  const coupnShow = document.getElementById('coupn-div');
-
   if (coupnInputValue === "NEW15") {
-    const discount = (currentTotalPrice * 15) / 100; 
-    setInnerTextById("grand-total-price", (currentTotalPrice - discount));
-    setInnerTextById('discount-amount', discount);
-    coupnShow.classList.add('hidden')
-    discountShow.classList.remove('hidden')
+    calculateAndSetDiscountAmount(currentTotalPrice, 15);
+  }
+  if (
+    coupnInputValue === "Couple 20" ||
+    coupnInputValue === "Couple20" ||
+    coupnInputValue === "couple20" ||
+    coupnInputValue === "COUPLE20"
+  ) {
+    calculateAndSetDiscountAmount(currentTotalPrice, 20)
   }
 }
