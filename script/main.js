@@ -8,23 +8,11 @@ function setInnerTextById(elementId, value) {
   element.innerText = value;
 }
 
+//--------------------------------------
 function setBackgroundAndColor(event) {
   event.target.classList.add("bg-custom-green");
   event.target.classList.add("hover:bg-custom-green");
   event.target.style.color = "white";
-}
-
-//--------------------------------------
-function addItem(elementId) {
-  const seatName = getElementInnerTextById(elementId);
-  const seatsContainer = document.getElementById("seats-container");
-  seatsContainer.innerHTML += `
-  <li class="flex justify-between items-center text-base text-[#03071299] font-normal">
-     <span class='user-selected-seat'>${seatName}</span> 
-     <span>Economy</span> 
-     <span>550</span>
-  </li>
-  `;
 }
 
 function decrementTotalSeatBy(number) {
@@ -35,6 +23,18 @@ function decrementTotalSeatBy(number) {
 function incrementUserTotalSeatBy(number) {
   const currentUserSeats = parseInt(getElementInnerTextById("seats-increment"));
   setInnerTextById("seats-increment", currentUserSeats + number);
+}
+
+function addItem(elementId) {
+  const seatName = getElementInnerTextById(elementId);
+  const seatsContainer = document.getElementById("seats-container");
+  seatsContainer.innerHTML += `
+  <li class="flex justify-between items-center text-base text-[#03071299] font-normal">
+     <span class='user-selected-seat'>${seatName}</span> 
+     <span>Economy</span> 
+     <span>550</span>
+  </li>
+  `;
 }
 
 function updateTotalPriceBy(number) {
