@@ -192,7 +192,7 @@
       </section>
 
       <!-- PH paribahan section -->
-      <section class="bg-[#f7f8f8] py-40 rounded-t-[100px]">
+      <section class="bg-[#f7f8f8] py-28 rounded-t-[100px]">
         <header class="mx-auto max-w-2xl text-center mb-11 space-y-6">
           <h2 class="text-4xl font-bold">P.H Paribahan</h2>
           <p class="inter-font font-normal text-lg text-gray-400">
@@ -274,7 +274,7 @@
 
         <!--bus seats section  -->
         <section
-          class="inter-font container mx-auto mt-5 flex bg-white rounded-3xl p-8 justify-center gap-16"
+          class="flex flex-col lg:flex-row inter-font container mx-auto mt-5 bg-white rounded-3xl p-8 justify-center gap-16"
         >
           <!-- sets -->
           <div class="">
@@ -286,11 +286,12 @@
               <div
                 class="flex items-center justify-between border-dashed border-b-2 py-4 inter-font"
               >
-                <div class="flex items-center">
+                <div class="flex gap-1 items-center">
                   <img src="/images/seat-gray.png" alt="" />
                   <p class="text-lg font-medium text-gray-500">Available</p>
                 </div>
-                <div class="flex items-center">
+
+                <div class="flex gap-1 items-center">
                   <img src="/images/seat-green-filled.png" alt="" />
                   <p class="text-lg font-medium text-custom-green">Available</p>
                 </div>
@@ -410,8 +411,14 @@
               </ul>
             </div>
           </div>
+
           <!-- seperator -->
-          <img src="/images/green-seperator.svg" alt="" />
+          <img
+            class="hidden lg:block"
+            src="/images/green-seperator.svg"
+            alt=""
+          />
+
           <!-- seat count -->
           <aside>
             <h3 class="border-dashed border-b-2 pb-5 font-semibold text-2xl">
@@ -448,9 +455,11 @@
                 <span>Total Price</span> <span>BDT 1100</span>
               </h2>
 
-              <div class="join bg-white p-3 rounded-xl">
+              <div
+                class="join flex justify-between bg-white p-3 rounded-xl w-full"
+              >
                 <input
-                  class="input input- join-item"
+                  class="outline-none pl-1"
                   placeholder="Have any copupon?"
                 />
                 <button
@@ -459,6 +468,7 @@
                   Apply
                 </button>
               </div>
+
               <h2 class="text-base font-semibold flex justify-between py-5">
                 <span>Grand Total</span> <span>BDT 1100</span>
               </h2>
@@ -467,7 +477,6 @@
             <!-- form -->
 
             <form action="" class="space-y-4">
-
               <label class="form-control">
                 <div class="label">
                   <span class="font-semibold text-base">Passenger Name *</span>
@@ -498,7 +507,11 @@
                   class="input input-bordered w-full"
                 />
               </label>
-              <button class="btn bg-custom-green w-[100%] text-white hover:bg-slate-800 rounded-2xl">Next</button>
+              <button
+                class="btn bg-custom-green w-[100%] text-white hover:bg-slate-800 rounded-2xl"
+              >
+                Next
+              </button>
             </form>
             <div class="text-[#03071299] mt-6 flex justify-evenly">
               <a href="" class="underline">Terms and Conditions</a>
@@ -506,10 +519,47 @@
             </div>
           </aside>
         </section>
+
       </section>
+
     </main>
-    <footer class="mx-auto">
-      
+
+    <footer class="bg-[#030712]">
+      <div
+        class="px-5 text-center lg:text-left gap-6 flex flex-col md:flex-row  justify-between container mx-auto text-white p-10 text-base-content border-dashed border-gray-700 border-b-2"
+      >
+        <div class="md:max-w-xs">
+          <h2 class="font-extrabold text-4xl mb-4">E-Ticket</h2>
+          <p class="font-normal text-lg text-gray-200">
+            P-Ticket is a digital platform to make your daily commuting better.
+          </p>
+        </div>
+
+        <nav>
+          <h3 class="font-semibold text-xl mb-4">Download our app</h3>
+          <a class="text-white btn btn-outline">
+            <img src="/images/playstore.png" alt="" />
+            <div class="flex flex-col items-start">
+              <h4 class="font-normal text-sm">GET ON</h4>
+              <h2>Google Play</h2>
+            </div>
+          </a>
+        </nav>
+      </div>
+
+      <div
+        class="py-8 px-5 inter-font container mx-auto flex flex-col lg:flex-row gap-5 text-center lg:text-left text-white justify-between"
+      >
+        <p class="text-gray-500">
+          &copy;all rights reserved, E-Ticket services limited.2024
+        </p>
+        <nav class="flex flex-col lg:flex-row gap-2 lg:gap-7">
+          <a class="link link-hover">Terms & condition</a>
+          <a class="link link-hover">Return & refund policy</a>
+          <a class="link link-hover">Privacy policy</a>
+        </nav>
+      </div>
+
     </footer>
   </body>
 </html>
