@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" class="scroll-smooth" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,8 +27,10 @@
       };
     </script>
   </head>
+
   <body class="raleway-font">
-    <header class="container mx-auto px-5">
+
+    <header id="header" class="container mx-auto px-5">
       <!-- nav bar -->
       <nav class="raleway-font">
         <div class="navbar bg-base-100">
@@ -144,7 +146,7 @@
       </div>
     </header>
 
-    <main class="px-5">
+    <main id="main" class="px-5">
       <!-- coupn section -->
       <section class="container mx-auto flex flex-col items-center mb-16">
         <h2 class="text-4xl font-bold">Best offers for you</h2>
@@ -506,13 +508,7 @@
                   class="input input-bordered w-full"
                 />
               </label>
-              <button
-              id="next-btn"
-              disabled
-                class=" btn bg-custom-green w-[100%] text-white hover:bg-slate-800 rounded-2xl"
-              >
-                Next
-              </button>
+              <button disabled  onclick="goToNextPage(event)" id="next-btn" class="btn bg-custom-green w-[100%] text-white hover:bg-slate-800 rounded-2xl">Next</button>
             </form>
             <div class="text-[#03071299] mt-6 flex justify-evenly">
               <a href="" class="underline">Terms and Conditions</a>
@@ -523,7 +519,7 @@
       </section>
     </main>
 
-    <footer class="bg-[#030712]">
+    <footer id="footer" class="bg-[#030712]">
       <div
         class="px-5 text-center lg:text-left gap-6 flex flex-col md:flex-row justify-between container mx-auto text-white p-10 text-base-content border-dashed border-gray-700 border-b-2"
       >
@@ -559,6 +555,25 @@
         </nav>
       </div>
     </footer>
+
+    <!-- next page section -->
+    <section id="next-page" class="bg-[#faf7f8] flex px-5 items-center raleway-font justify-center min-h-screen hidden">
+      <div class="card max-w-2xl bg-base-100 shadow-xl container mx-auto">
+        <figure class="px-10 pt-10">
+          <img src="/images/success.png" alt="Shoes" class="rounded-xl" />
+        </figure>
+        <div class="card-body items-center text-center">
+          <h2 class="card-title uppercase text-success font-bold mb-6">Success</h2>
+          <strong>Thank you for Booking Our Bus Seats. 
+            We are working hard to find the best service and deals for you. 
+            Shortly you will find a confirmation in your email.</strong>
+          <p class="text-gray-400 mb-3">Shortly you will find a confirmation in your email</p>
+          <div class="card-actions">
+            <button class="btn btn-success rounded-full text-white hover:bg-custom-green">Continue</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- main script link -->
     <script src="/script/main.js"></script>

@@ -9,7 +9,8 @@ function setInnerTextById(elementId, value) {
 }
 
 function setBackgroundAndColor(event) {
-  event.target.style.backgroundColor = "green";
+  event.target.classList.add("bg-custom-green");
+  event.target.classList.add("hover:bg-custom-green");
   event.target.style.color = "white";
 }
 
@@ -89,3 +90,24 @@ numberInputElement.addEventListener("keyup", function (event) {
     nextBtn.setAttribute("disabled", true);
   }
 });
+
+// --------------------------------------
+// add event listener to next button:
+nextBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+});
+
+// function for Next button:
+function goToNextPage(event) {
+  const header = document.getElementById("header");
+  const main = document.getElementById("main");
+  const footer = document.getElementById("footer");
+  const nextPage = document.getElementById("next-page");
+
+  setTimeout(() => {
+    header.classList.add("hidden");
+    main.classList.add("hidden");
+    footer.classList.add("hidden");
+    nextPage.classList.remove("hidden");
+  }, 300);
+}
