@@ -64,7 +64,7 @@
                 <li><a>Search</a></li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-4xl font-extrabold hover:bg-white"
+            <a class="btn btn-ghost text-xl lg:text-4xl font-extrabold hover:bg-white"
               >E-Ticket</a
             >
           </div>
@@ -79,8 +79,8 @@
           </div>
           <!-- navbar end -->
           <div class="navbar-end">
-            <button class="btn btn-outline btn-success rounded-xl bg-green-100">
-              <span class="text-xl font-bold">Bus</span
+            <button class="btn-outline btn-success rounded-xl bg-green-100 btn btn-sm  md:btn-md">
+              <span class=" lg:text-xl font-bold">Bus</span
               ><img src="/images/bus-icon.png" alt="" />
             </button>
           </div>
@@ -310,10 +310,10 @@
               </div>
             </header>
             <!-- all seats list -->
-            <div class="inter-font flex justify-between gap-14">
-              <ul class="grid grid-cols-3 gap-7">
+            <div class="inter-font flex justify-between gap-6 md:gap-14">
+              <ul class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-7">
                 <li
-                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3 hidden md:flex"
                 >
                   A
                 </li>
@@ -321,7 +321,7 @@
                 <li id="A2" class="seat btn px-8">A2</li>
 
                 <li
-                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3 hidden md:flex"
                 >
                   B
                 </li>
@@ -329,7 +329,7 @@
                 <li id="B2" class="seat btn px-8">B2</li>
 
                 <li
-                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3 hidden md:flex"
                 >
                   C
                 </li>
@@ -337,7 +337,7 @@
                 <li id="C2" class="seat btn px-8">C2</li>
 
                 <li
-                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3 hidden md:flex"
                 >
                   D
                 </li>
@@ -345,7 +345,7 @@
                 <li id="D2" class="seat btn px-8">D2</li>
 
                 <li
-                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3 hidden md:flex"
                 >
                   E
                 </li>
@@ -353,7 +353,7 @@
                 <li id="E2" class="seat btn px-8">E2</li>
 
                 <li
-                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3 hidden md:flex"
                 >
                   F
                 </li>
@@ -361,7 +361,7 @@
                 <li id="F2" class="seat btn px-8">F2</li>
 
                 <li
-                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3 hidden md:flex"
                 >
                   G
                 </li>
@@ -369,7 +369,7 @@
                 <li id="G2" class="seat btn px-8">G2</li>
 
                 <li
-                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3 hidden md:flex"
                 >
                   H
                 </li>
@@ -377,7 +377,7 @@
                 <li id="H2" class="seat btn px-8">H2</li>
 
                 <li
-                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3 hidden md:flex"
                 >
                   I
                 </li>
@@ -385,7 +385,7 @@
                 <li id="I2" class="seat btn px-8">I2</li>
 
                 <li
-                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
+                  class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3 hidden md:flex"
                 >
                   J
                 </li>
@@ -393,7 +393,7 @@
                 <li id="J2" class="seat btn px-8">J2</li>
               </ul>
 
-              <ul class="grid grid-cols-2 gap-7">
+              <ul class="grid grid-cols-2 gap-3 md:gap-7">
                 <li id="A3" class="seat btn px-8">A3</li>
                 <li id="A4" class="seat btn px-8">A4</li>
                 <li id="B3" class="seat btn px-8">B3</li>
@@ -426,7 +426,7 @@
           />
 
           <!-- seat count -->
-          <aside>
+          <aside class="lg:w-4/12">
             <h3 class="border-dashed border-b-2 pb-5 font-semibold text-2xl">
               Select Your Seat
             </h3>
@@ -454,8 +454,9 @@
                 <span>Total Price:</span> <p">BDT <span id="total-price">00</span></p>
               </h2>
 
-                <div>
-                  <h2 id="discount-show" class="hidden text-base min-w-[320px] font-medium italic flex justify-between border-dashed border-b-2 py-4 border-t-2">
+              <div>
+
+                  <h2 id="discount-show" class="hidden text-base font-medium italic flex justify-between border-dashed border-b-2 py-4 border-t-2">
                     <span class="text-custom-green">Discount:</span> <p">BDT <span id="discount-amount">00</span></p>
                   </h2>
 
@@ -465,7 +466,7 @@
               >
                 <input
                 id="coupn-input-fild"
-                  class="outline-none pl-1"
+                  class="outline-none pl-1 max-w-[320px]"
                   placeholder="Have any copupon?"
                 />
                 <button
@@ -526,6 +527,7 @@
               <a href="" class="underline">Cancellation Policy</a>
             </div>
           </aside>
+          
         </section>
       </section>
     </main>
