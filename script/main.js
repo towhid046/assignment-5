@@ -49,12 +49,17 @@ function addItem(elementId) {
 }
 
 // ----------------------------------------------
+// ----------------------------------------------
 // declare array to track user selected seats(global variable);
 let selectedSeats = [];
+
+//---------------------------------
+// seat click handelar funtion:
 
 function seatClickEventHandelar(event) {
   const elementId = event.target.id;
 
+ if(selectedSeats.length < 4){
   if (selectedSeats.includes(elementId) === false) {
     selectedSeats.push(elementId);
 
@@ -64,9 +69,13 @@ function seatClickEventHandelar(event) {
     incrementUserTotalSeatBy(1);
     updateTotalPriceBy(550);
     updateGrandTotalPriceBy(550);
-  } else {
+    applyCoupnCode(selectedSeats);
+  } else if (selectedSeats.includes(elementId) === true) {
     alert("Seat already have selected!");
   }
+ } else{
+  alert('You only can purchese 4 seat by your account')
+ }
 }
 
 // added event listener to seat:
@@ -78,7 +87,6 @@ for (let seat of seats) {
 //------------------------------------
 // Enable or disabled Next button based on the condition:
 const numberInputElement = document.getElementById("form-number-input");
-
 const nextBtn = document.getElementById("next-btn");
 
 numberInputElement.addEventListener("keyup", function (event) {
@@ -95,10 +103,7 @@ numberInputElement.addEventListener("keyup", function (event) {
 // add event listener to next button:
 nextBtn.addEventListener("click", function (event) {
   event.preventDefault();
-});
 
-// function for Next button:
-function goToNextPage(event) {
   const header = document.getElementById("header");
   const main = document.getElementById("main");
   const footer = document.getElementById("footer");
@@ -110,4 +115,20 @@ function goToNextPage(event) {
     footer.classList.add("hidden");
     nextPage.classList.remove("hidden");
   }, 300);
+});
+// -------------------------------------
+// enable apply coupn button based on the condition:
+function applyCoupnCode(){
+  if(selectedSeats.length === 4){
+    alert('You got a chance to discout');
+   const applyBtn = document.getElementById('apply-btn');
+    applyBtn.removeAttribute('disabled');
+  }
+}
+
+function getDiscount(){
+  const coupnInputValue = document.getElementById('coupn-input-fild').value;
+  if(coupnInputValue === 'NEW15'){
+    
+  }
 }

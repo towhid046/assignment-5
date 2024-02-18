@@ -459,10 +459,14 @@
                 class="join flex justify-between bg-white p-3 rounded-xl w-full"
               >
                 <input
+                id="coupn-input-fild"
                   class="outline-none pl-1"
                   placeholder="Have any copupon?"
                 />
                 <button
+                onclick="getDiscount()"
+                id="apply-btn"
+                disabled
                   class="btn bg-custom-green text-white hover:bg-slate-800"
                 >
                   Apply
@@ -508,7 +512,7 @@
                   class="input input-bordered w-full"
                 />
               </label>
-              <button disabled  onclick="goToNextPage(event)" id="next-btn" class="btn bg-custom-green w-[100%] text-white hover:bg-slate-800 rounded-2xl">Next</button>
+              <button disabled id="next-btn" class="btn bg-custom-green w-[100%] text-white hover:bg-slate-800 rounded-2xl">Next</button>
             </form>
             <div class="text-[#03071299] mt-6 flex justify-evenly">
               <a href="" class="underline">Terms and Conditions</a>
