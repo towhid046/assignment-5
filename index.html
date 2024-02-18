@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Ticket</title>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="/style/style.css" />
     <!-- daisy ui and tailwind css link -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
@@ -24,8 +26,6 @@
         },
       };
     </script>
-    <!-- custom css link -->
-    <link rel="stylesheet" href="/style/style.css" />
   </head>
   <body class="raleway-font">
     <header class="container mx-auto px-5">
@@ -101,7 +101,9 @@
                 assumenda excepturi exercitationem quasi. Hello there get touch
                 to take advantage of it
               </p>
-              <button class="btn btn-success">Buy Tickets</button>
+              <a class="btn btn-success" href="#buy-ticket-section"
+                >Buy Tickets</a
+              >
             </div>
           </div>
         </div>
@@ -192,7 +194,10 @@
       </section>
 
       <!-- PH paribahan section -->
-      <section class="bg-[#f7f8f8] py-28 rounded-t-[100px]">
+      <section
+        id="buy-ticket-section"
+        class="bg-[#f7f8f8] py-28 rounded-t-[100px]"
+      >
         <header class="mx-auto max-w-2xl text-center mb-11 space-y-6">
           <h2 class="text-4xl font-bold">P.H Paribahan</h2>
           <p class="inter-font font-normal text-lg text-gray-400">
@@ -224,7 +229,7 @@
               >
                 <img src="/images/seat-green-filled.png" alt="" />
                 <p class="font-medium inter-font text-lg">
-                  <span>40</span> Seats left
+                  <span id="seat-counter">40</span> Seats left
                 </p>
               </button>
             </header>
@@ -311,103 +316,103 @@
                 >
                   A
                 </li>
-                <li class="btn px-8">A1</li>
-                <li class="btn px-8">A2</li>
+                <li id="A1" class="seat btn px-8">A1</li>
+                <li id="A2" class="seat btn px-8">A2</li>
 
                 <li
                   class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
                 >
                   B
                 </li>
-                <li class="btn px-8">B1</li>
-                <li class="btn px-8">B2</li>
+                <li id="B1" class="seat btn px-8">B1</li>
+                <li id="B2" class="seat btn px-8">B2</li>
 
                 <li
                   class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
                 >
                   C
                 </li>
-                <li class="btn px-8">C1</li>
-                <li class="btn px-8">C2</li>
+                <li id="C1" class="seat btn px-8">C1</li>
+                <li id="C2" class="seat btn px-8">C2</li>
 
                 <li
                   class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
                 >
                   D
                 </li>
-                <li class="btn px-8">D1</li>
-                <li class="btn px-8">D2</li>
+                <li id="D1" class="seat btn px-8">D1</li>
+                <li id="D2" class="seat btn px-8">D2</li>
 
                 <li
                   class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
                 >
                   E
                 </li>
-                <li class="btn px-8">E1</li>
-                <li class="btn px-8">E2</li>
+                <li id="E1" class="seat btn px-8">E1</li>
+                <li id="E2" class="seat btn px-8">E2</li>
 
                 <li
                   class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
                 >
                   F
                 </li>
-                <li class="btn px-8">F1</li>
-                <li class="btn px-8">F2</li>
+                <li id="F1" class="seat btn px-8">F1</li>
+                <li id="F2" class="seat btn px-8">F2</li>
 
                 <li
                   class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
                 >
                   G
                 </li>
-                <li class="btn px-8">G1</li>
-                <li class="btn px-8">G2</li>
+                <li id="G1" class="seat btn px-8">G1</li>
+                <li id="G2" class="seat btn px-8">G2</li>
 
                 <li
                   class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
                 >
                   H
                 </li>
-                <li class="btn px-8">H1</li>
-                <li class="btn px-8">H2</li>
+                <li id="H1" class="seat btn px-8">H1</li>
+                <li id="H2" class="seat btn px-8">H2</li>
 
                 <li
                   class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
                 >
                   I
                 </li>
-                <li class="btn px-8">I1</li>
-                <li class="btn px-8">I2</li>
+                <li id="I1" class="seat btn px-8">I1</li>
+                <li id="I2" class="seat btn px-8">I2</li>
 
                 <li
                   class="btn bg-white hover:bg-white shadow-none border-0 hover:cursor-text relative left-3"
                 >
                   J
                 </li>
-                <li class="btn px-8">J2</li>
-                <li class="btn px-8">J2</li>
+                <li id="J1" class="seat btn px-8">J1</li>
+                <li id="J2" class="seat btn px-8">J2</li>
               </ul>
 
               <ul class="grid grid-cols-2 gap-7">
-                <li class="btn px-8">A3</li>
-                <li class="btn px-8">A4</li>
-                <li class="btn px-8">B3</li>
-                <li class="btn px-8">B4</li>
-                <li class="btn px-8">C3</li>
-                <li class="btn px-8">C4</li>
-                <li class="btn px-8">D3</li>
-                <li class="btn px-8">D4</li>
-                <li class="btn px-8">E3</li>
-                <li class="btn px-8">E4</li>
-                <li class="btn px-8">F3</li>
-                <li class="btn px-8">F4</li>
-                <li class="btn px-8">G3</li>
-                <li class="btn px-8">G4</li>
-                <li class="btn px-8">H3</li>
-                <li class="btn px-8">H4</li>
-                <li class="btn px-8">I3</li>
-                <li class="btn px-8">I4</li>
-                <li class="btn px-8">J3</li>
-                <li class="btn px-8">J4</li>
+                <li id="A3" class="seat btn px-8">A3</li>
+                <li id="A4" class="seat btn px-8">A4</li>
+                <li id="B3" class="seat btn px-8">B3</li>
+                <li id="B4" class="seat btn px-8">B4</li>
+                <li id="C3" class="seat btn px-8">C3</li>
+                <li id="C4" class="seat btn px-8">C4</li>
+                <li id="D3" class="seat btn px-8">D3</li>
+                <li id="D4" class="seat btn px-8">D4</li>
+                <li id="E3" class="seat btn px-8">E3</li>
+                <li id="E4" class="seat btn px-8">E4</li>
+                <li id="F3" class="seat btn px-8">F3</li>
+                <li id="F4" class="seat btn px-8">F4</li>
+                <li id="G3" class="seat btn px-8">G3</li>
+                <li id="G4" class="seat btn px-8">G4</li>
+                <li id="H3" class="seat btn px-8">H3</li>
+                <li id="H4" class="seat btn px-8">H4</li>
+                <li id="I3" class="seat btn px-8">I3</li>
+                <li id="I4" class="seat btn px-8">I4</li>
+                <li id="J3" class="seat btn px-8">J3</li>
+                <li id="J4" class="seat btn px-8">J4</li>
               </ul>
             </div>
           </div>
@@ -431,28 +436,21 @@
               >
                 <h3>
                   Seats
-                  <span class="btn btn-xs bg-custom-green text-white">0</span>
+                  <span
+                    id="seats-increment"
+                    class="btn btn-xs bg-custom-green text-white"
+                    >0</span
+                  >
                 </h3>
                 <h3>Calss</h3>
                 <h3>Price</h3>
               </div>
 
-              <ul class="items mt-5 space-y-2 mb-5">
-                <li
-                  class="flex justify-between items-center text-base text-[#03071299] font-normal"
-                >
-                  <span>A1</span> <span>Economy</span> <span>550</span>
-                </li>
-                <li
-                  class="flex justify-between items-center text-base text-[#03071299] font-normal"
-                >
-                  <span>A1</span> <span>Economy</span> <span>550</span>
-                </li>
-              </ul>
+              <ul id="seats-container" class="items mt-5 space-y-2 mb-5"></ul>
 
               <hr />
               <h2 class="text-base font-semibold flex justify-between py-5">
-                <span>Total Price</span> <span>BDT 1100</span>
+                <span>Total Price</span> <p">BDT <span id="total-price">00</span></p>
               </h2>
 
               <div
@@ -470,7 +468,7 @@
               </div>
 
               <h2 class="text-base font-semibold flex justify-between py-5">
-                <span>Grand Total</span> <span>BDT 1100</span>
+                <span>Grand Total</span> <p>BDT <span id="grand-total-price">00</span></p>
               </h2>
             </div>
 
@@ -519,14 +517,12 @@
             </div>
           </aside>
         </section>
-
       </section>
-
     </main>
 
     <footer class="bg-[#030712]">
       <div
-        class="px-5 text-center lg:text-left gap-6 flex flex-col md:flex-row  justify-between container mx-auto text-white p-10 text-base-content border-dashed border-gray-700 border-b-2"
+        class="px-5 text-center lg:text-left gap-6 flex flex-col md:flex-row justify-between container mx-auto text-white p-10 text-base-content border-dashed border-gray-700 border-b-2"
       >
         <div class="md:max-w-xs">
           <h2 class="font-extrabold text-4xl mb-4">E-Ticket</h2>
@@ -559,7 +555,9 @@
           <a class="link link-hover">Privacy policy</a>
         </nav>
       </div>
-
     </footer>
+
+    <!-- main script link -->
+    <script src="/script/main.js"></script>
   </body>
 </html>
